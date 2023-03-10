@@ -1,0 +1,128 @@
+header {
+  height: 100vh;
+  padding-top: 7rem;
+  overflow: hidden;
+  background: url(../../assets/sb-blog-programming.png);
+  background-size: cover;
+
+  clip-path: polygon(0 0, 100% 0, 100% 600px, 0 100%);
+
+  /* background: no-repeat; */
+  /* background: linear-gradient(var(--color-bg-card), #e809ce); */
+}
+
+h5 {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  /* letter-spacing: 8px; */
+
+  animation: moveInTop 1s ease-out;
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  70% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.header__container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+/* ===================== CTA =============== */
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 4rem;
+}
+
+.socials__icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/* =========== ME ========== */
+.me {
+  background-color: rgb(255, 255, 255);
+  width: 19rem;
+  height: 30rem;
+  position: absolute;
+  left: calc(50% - 11rem);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* =========== SCROLL DOWN ========== */
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 10rem;
+  transform: rotate(90deg);
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--color-while);
+  padding: 0.5rem;
+}
+.scroll__down:hover {
+  font-weight: 300;
+  padding: 0.5rem;
+  /* background-color: var(--color-bg-card); */
+  border-radius: 3rem;
+  color: var(--color-black);
+}
+
+/* =========== MEDIA QUERIES (MEDIUM DEVICES) ========== */
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 100vh;
+  }
+}
+
+/* =========== MEDIA QUERIES (SMALL DEVICES) ========== */
+/* max-width: 600px คือ 60 พิกเซลและต่ำกว่า */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+
+  h1 > span {
+    font-size: 2rem;
+  }
+
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+}
